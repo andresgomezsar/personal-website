@@ -10,7 +10,7 @@ export default function Contact() {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="max-w-2xl mx-auto bg-white p-12 rounded-[3rem] shadow-xl border border-gray-100"
+          className="max-w-2xl mx-auto bg-white p-6 md:p-12 rounded-[2rem] md:rounded-[3rem] shadow-xl border border-gray-100"
         >
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-6 text-gray-900">Let's Connect</h2>
           <p className="text-xl text-gray-600 mb-12">
@@ -18,13 +18,13 @@ export default function Contact() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 text-left">
-            <a href="mailto:andresgomezsar@gmail.com" className="flex items-center gap-4 p-4 rounded-2xl hover:bg-gray-50 transition-colors group">
-              <div className="p-3 bg-teal-100 text-teal-600 rounded-xl group-hover:scale-110 transition-transform">
+            <a href="mailto:andresgomezsar@gmail.com" className="flex items-center gap-4 p-4 rounded-2xl hover:bg-gray-50 transition-colors group min-w-0">
+              <div className="p-3 bg-teal-100 text-teal-600 rounded-xl group-hover:scale-110 transition-transform flex-shrink-0">
                 <Mail className="w-6 h-6" />
               </div>
-              <div>
+              <div className="min-w-0">
                 <p className="text-sm text-gray-500">Email</p>
-                <p className="font-medium text-gray-900">andresgomezsar@gmail.com</p>
+                <p className="font-medium text-gray-900 text-sm md:text-base">andresgomezsar@gmail.com</p>
               </div>
             </a>
 
