@@ -55,7 +55,7 @@ export default function Hero() {
               </Button>
               
               <div className="flex items-center gap-4 ml-4">
-                <a href="https://github.com" target="_blank" rel="noreferrer" className="p-2 rounded-full bg-white/50 hover:bg-white hover:text-primary transition-all shadow-sm hover:shadow-md">
+                <a href="https://github.com/andresgomezsar" target="_blank" rel="noreferrer" className="p-2 rounded-full bg-white/50 hover:bg-white hover:text-primary transition-all shadow-sm hover:shadow-md">
                   <Github className="h-6 w-6" />
                 </a>
                 <a href="https://linkedin.com/in/andresgomezsar" target="_blank" rel="noreferrer" className="p-2 rounded-full bg-white/50 hover:bg-white hover:text-primary transition-all shadow-sm hover:shadow-md">
