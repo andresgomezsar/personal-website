@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Brain, Mic } from "lucide-react";
+import { ExternalLink, Github, Brain, Mic, Video } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -29,6 +29,18 @@ export default function Projects() {
       },
       icon: <Brain className="w-8 h-8 text-white" />,
       color: "bg-orange-500"
+    },
+    {
+      title: "Ritmolabs.co: Content Automation Platform",
+      description: "Multi-tenant pipeline that scrapes YouTube videos, uses LLMs to select clips, and automates editing—cropping, speaker-tracking, Whisper captions, and effects—then schedules uploads to TikTok via API. Includes a social listening system with parallel multi-platform collectors, AI trend analysis with sentiment scoring, and real-time WebSocket alerts.",
+      tech: ["FastAPI", "FFmpeg", "OpenAI", "Whisper", "WebSocket"],
+      period: "Jan 2026 -- Present",
+      links: {
+        demo: "https://ritmolabs.co",
+        github: "#"
+      },
+      icon: <Video className="w-8 h-8 text-white" />,
+      color: "bg-rose-500"
     }
   ];
 
