@@ -9,17 +9,17 @@ export default function Skills() {
     },
     {
       name: "Programming",
-      skills: ["Python", "R", "SQL", "TypeScript", "React"],
+      skills: ["Python", "R", "SQL"],
       color: "border-teal-200 bg-teal-50"
     },
     {
-      name: "Data & AI",
-      skills: ["PyTorch", "Keras", "scikit-learn", "Pandas", "Whisper", "OpenAI API"],
+      name: "Data Tools",
+      skills: ["Jupyter", "RStudio", "Git", "VS Code", "PostgreSQL", "Power BI", "Tableau", "Splunk"],
       color: "border-blue-200 bg-blue-50"
     },
     {
-      name: "Tools",
-      skills: ["Git", "VS Code", "PostgreSQL", "Power BI", "Tableau", "Docker"],
+      name: "Libraries & Frameworks",
+      skills: ["PyTorch", "Keras", "scikit-learn", "Pandas", "NumPy", "Matplotlib", "spaCy", "TextBlob", "Whisper", "OpenAI API", "PySpark", "Dask", "tidyverse", "dplyr", "ggplot2"],
       color: "border-orange-200 bg-orange-50"
     }
   ];

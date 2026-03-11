@@ -5,13 +5,15 @@ export default function Experience() {
   const experiences = [
     {
       title: "Founder",
-      company: "Cognos, Inc.",
+      company: "Cognos",
       location: "Los Angeles, CA",
       period: "May 2025 -- Dec 2025",
       description: [
-        "Building tools for private, local AI deployment and document verification."
+        "Created developer tools to integrate AI voice wearable API data with web applications.",
+        "Developed custom MCP server integrating Limitless AI Pendant with Oura Ring data to let Claude or ChatGPT access digital memories and health data.",
+        "Met with potential investors, did product demos to stakeholders and managed cofounder team."
       ],
-      tech: ["LLMs", "RAG", "Python"]
+      tech: ["MCP", "API", "LLMs", "Python"]
     },
     {
       title: "Analyst, Information Security — Human Risk & Analytics",
