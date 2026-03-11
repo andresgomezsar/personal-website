@@ -7,7 +7,7 @@ export default function Experience() {
       title: "Founder",
       company: "Cognos, Inc.",
       location: "Los Angeles, CA",
-      period: "May 2025 -- Present",
+      period: "May 2025 -- Dec 2025",
       description: [
         "Building tools for private, local AI deployment and document verification."
       ],

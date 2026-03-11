@@ -38,13 +38,13 @@ export default function Contact() {
               </div>
             </a>
 
-            <a href="https://cognos.me" target="_blank" rel="noreferrer" className="flex items-center gap-4 p-4 rounded-2xl hover:bg-gray-50 transition-colors group">
+            <a href="https://ritmolabs.co" target="_blank" rel="noreferrer" className="flex items-center gap-4 p-4 rounded-2xl hover:bg-gray-50 transition-colors group">
               <div className="p-3 bg-orange-100 text-orange-600 rounded-xl group-hover:scale-110 transition-transform">
                 <Globe className="w-6 h-6" />
               </div>
               <div>
                 <p className="text-sm text-gray-500">Website</p>
-                <p className="font-medium text-gray-900">cognos.me</p>
+                <p className="font-medium text-gray-900">ritmolabs.co</p>
               </div>
             </a>
 
