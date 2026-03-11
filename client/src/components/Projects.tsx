@@ -7,30 +7,6 @@ import { Button } from "@/components/ui/button";
 export default function Projects() {
   const projects = [
     {
-      title: "Neuro Necklace: Local Memory Store",
-      description: "Built a voice-first memory pipeline for the Limitless Pendant: local transcription, speaker diarization, and conversation summarization without cloud dependencies. Uses Whisper-based transcription with Pyannote voice ID and MCP integration.",
-      tech: ["Whisper", "VAD", "Ollama", "MCP", "Python"],
-      period: "Jun 2024 -- Apr 2025",
-      links: {
-        demo: "#",
-        github: "#"
-      },
-      icon: <Mic className="w-8 h-8 text-white" />,
-      color: "bg-teal-500"
-    },
-    {
-      title: "Cognos AI Platform",
-      description: "On-premise AI web application for local LLM deployment. Features document verification with claim decomposition, RAG-based fact-checking, and confidence-scored citations. Integrates with OpenAI, Ollama, and Perplexity API.",
-      tech: ["React", "LLMs", "RAG", "Docker"],
-      period: "May 2025 -- Present",
-      links: {
-        demo: "https://cognos.me",
-        github: "#"
-      },
-      icon: <Brain className="w-8 h-8 text-white" />,
-      color: "bg-orange-500"
-    },
-    {
       title: "Ritmolabs.co: Content Automation Platform",
       description: "Multi-tenant pipeline that scrapes YouTube videos, uses LLMs to select clips, and automates editing—cropping, speaker-tracking, Whisper captions, and effects—then schedules uploads to TikTok via API. Includes a social listening system with parallel multi-platform collectors, AI trend analysis with sentiment scoring, and real-time WebSocket alerts.",
       tech: ["FastAPI", "FFmpeg", "OpenAI", "Whisper", "WebSocket"],
@@ -41,6 +17,30 @@ export default function Projects() {
       },
       icon: <Video className="w-8 h-8 text-white" />,
       color: "bg-rose-500"
+    },
+    {
+      title: "Cognos AI Platform",
+      description: "On-premise AI web application for local LLM deployment. Features document verification with claim decomposition, RAG-based fact-checking, and confidence-scored citations. Integrates with OpenAI, Ollama, and Perplexity API.",
+      tech: ["React", "LLMs", "RAG", "Docker"],
+      period: "May 2025 -- Dec 2025",
+      links: {
+        demo: "https://cognos.me",
+        github: "#"
+      },
+      icon: <Brain className="w-8 h-8 text-white" />,
+      color: "bg-orange-500"
+    },
+    {
+      title: "Neuro Necklace: Local Memory Store",
+      description: "Built a voice-first memory pipeline for the Limitless Pendant: local transcription, speaker diarization, and conversation summarization without cloud dependencies. Uses Whisper-based transcription with Pyannote voice ID and MCP integration.",
+      tech: ["Whisper", "VAD", "Ollama", "MCP", "Python"],
+      period: "Jun 2024 -- Apr 2025",
+      links: {
+        demo: "#",
+        github: "#"
+      },
+      icon: <Mic className="w-8 h-8 text-white" />,
+      color: "bg-teal-500"
     }
   ];
 
