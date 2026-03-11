@@ -20,7 +20,7 @@ export default function Projects() {
     },
     {
       title: "Omi Voice Coach",
-      description: "Built at DevHouse SF Hackathon. Passive language learning app powered by the Omi AI necklace (omi.me) — captures natural conversations via audio streaming, analyzes speech patterns with Gemini 2.5 Flash for grammar, vocabulary, and pronunciation feedback, and delivers personalized daily challenges using SM-2 spaced repetition.",
+      description: "Built at DevHouse SF Hackathon. A language learning app that listens to your real-life conversations through the Omi AI necklace (omi.me), spots mistakes in grammar, vocabulary, and pronunciation using AI, and sends you personalized daily practice exercises — like having a language tutor that learns from how you actually speak.",
       tech: ["FastAPI", "Gemini AI", "PostgreSQL", "Google Cloud", "Redis"],
       period: "Mar 2026",
       links: {
