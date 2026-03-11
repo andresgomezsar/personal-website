@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Brain, Mic, Video } from "lucide-react";
+import { ExternalLink, Github, Brain, Mic, Video, Languages } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -17,6 +17,18 @@ export default function Projects() {
       },
       icon: <Video className="w-8 h-8 text-white" />,
       color: "bg-rose-500"
+    },
+    {
+      title: "Omi Voice Coach",
+      description: "Built at DevHouse SF Hackathon. Passive language learning app powered by the Omi AI necklace (omi.me) — captures natural conversations via audio streaming, analyzes speech patterns with Gemini 2.5 Flash for grammar, vocabulary, and pronunciation feedback, and delivers personalized daily challenges using SM-2 spaced repetition.",
+      tech: ["FastAPI", "Gemini AI", "PostgreSQL", "Google Cloud", "Redis"],
+      period: "Mar 2026",
+      links: {
+        demo: "https://omi.me",
+        github: "https://github.com/andresgomezsar/omi_voice_coach"
+      },
+      icon: <Languages className="w-8 h-8 text-white" />,
+      color: "bg-violet-500"
     },
     {
       title: "Cognos AI Platform",
