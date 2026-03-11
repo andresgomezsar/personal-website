@@ -31,9 +31,9 @@ export default function Projects() {
       color: "bg-violet-500"
     },
     {
-      title: "Cognos AI Platform",
-      description: "On-premise AI web application for local LLM deployment. Features document verification with claim decomposition, RAG-based fact-checking, and confidence-scored citations. Integrates with OpenAI, Ollama, and Perplexity API.",
-      tech: ["React", "LLMs", "RAG", "Docker"],
+      title: "Cognos",
+      description: "Developer tools for integrating AI voice wearable API data with web applications. Built a custom MCP server that connects the Limitless AI Pendant and Oura Ring to Claude and ChatGPT, letting users access their digital memories and health data through AI assistants.",
+      tech: ["MCP", "API", "LLMs", "Python"],
       period: "May 2025 -- Dec 2025",
       links: {
         demo: "https://cognos.me",
