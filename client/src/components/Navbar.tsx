@@ -1,96 +1,111 @@
-import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { useEffect, useRef, useState } from "react";
+import { Download, Menu, X } from "lucide-react";
+
+const links = [
+  { name: "Work", href: "#projects" },
+  { name: "Experience", href: "#experience" },
+  { name: "About", href: "#about" },
+  { name: "Contact", href: "#contact" },
+];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const toggleRef = useRef<HTMLButtonElement>(null);
+  const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+    const onEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && isOpen) {
+        setIsOpen(false);
+        toggleRef.current?.focus();
+      }
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    const onOutsideClick = (event: PointerEvent) => {
+      if (
+        event.target instanceof Node &&
+        !navRef.current?.contains(event.target)
+      )
+        setIsOpen(false);
+    };
+    const desktop = window.matchMedia("(min-width: 768px)");
+    const onResize = () => {
+      if (desktop.matches) setIsOpen(false);
+    };
+    document.addEventListener("keydown", onEscape);
+    document.addEventListener("pointerdown", onOutsideClick);
+    desktop.addEventListener("change", onResize);
+    return () => {
+      document.removeEventListener("keydown", onEscape);
+      document.removeEventListener("pointerdown", onOutsideClick);
+      desktop.removeEventListener("change", onResize);
+    };
+  }, [isOpen]);
 
-  const navLinks = [
-    { name: "Projects", href: "#projects" },
-    { name: "Experience", href: "#experience" },
-    { name: "Skills", href: "#skills" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
-  ];
-
-  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false);
-    }
+  const closeMenu = (href: string) => {
+    setIsOpen(false);
+    // Move keyboard focus to the destination after the mobile menu disappears.
+    requestAnimationFrame(() =>
+      document.querySelector<HTMLElement>(href)?.focus({ preventScroll: true }),
+    );
   };
 
   return (
-    <nav
-      className={cn(
-        "fixed top-0 w-full z-50 transition-all duration-300",
-        scrolled ? "bg-white/80 backdrop-blur-md shadow-sm py-4" : "bg-transparent py-6"
-      )}
-    >
-      <div className="container mx-auto px-6 flex justify-between items-center">
-        <a 
-          href="#" 
-          onClick={(e) => scrollToSection(e, "#hero")}
-          className="text-2xl font-display font-bold tracking-tighter hover:text-primary transition-colors relative group"
+    <>
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
+      <header className="site-header">
+        <nav
+          ref={navRef}
+          className="section-shell nav-inner"
+          aria-label="Main navigation"
         >
-          AGS
-          <span className="absolute -bottom-1 left-0 w-0 h-1 bg-accent transition-all group-hover:w-full rounded-full"></span>
-        </a>
-
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
+          <a
+            href="#hero"
+            className="wordmark"
+            aria-label="Andrés Gómez Sarmiento, home"
+            onClick={() => closeMenu("#hero")}
+          >
+            Andrés<span className="wordmark-dot">.</span>
+          </a>
+          <button
+            ref={toggleRef}
+            className="menu-toggle"
+            aria-label={isOpen ? "Close navigation" : "Open navigation"}
+            aria-expanded={isOpen}
+            aria-controls="navigation-links"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? (
+              <X size={23} aria-hidden="true" />
+            ) : (
+              <Menu size={23} aria-hidden="true" />
+            )}
+          </button>
+          <div
+            id="navigation-links"
+            className={`nav-links${isOpen ? " is-open" : ""}`}
+          >
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => closeMenu(link.href)}
+              >
+                {link.name}
+              </a>
+            ))}
             <a
-              key={link.name}
-              href={link.href}
-              onClick={(e) => scrollToSection(e, link.href)}
-              className="text-sm font-medium text-gray-600 hover:text-primary transition-colors relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+              className="nav-resume"
+              href="/resume.pdf"
+              download="Andres-Gomez-Sarmiento-Resume.pdf"
+              onClick={() => setIsOpen(false)}
             >
-              {link.name}
+              Résumé <Download size={15} aria-hidden="true" />
             </a>
-          ))}
-          <Button variant="outline" className="rounded-full border-primary/20 text-primary hover:bg-primary hover:text-white transition-all" asChild>
-            <a href="/resume.pdf" target="_blank">Resume</a>
-          </Button>
-        </div>
-
-        {/* Mobile Nav Toggle */}
-        <button 
-          className="md:hidden text-foreground p-2 hover:bg-black/5 rounded-full transition-colors"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X /> : <Menu />}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl border-b border-black/5 p-6 flex flex-col gap-4 animate-in slide-in-from-top-5 shadow-xl">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              onClick={(e) => scrollToSection(e, link.href)}
-              className="text-lg font-medium text-gray-800 hover:text-primary"
-            >
-              {link.name}
-            </a>
-          ))}
-          <Button className="w-full mt-4 rounded-full">Resume</Button>
-        </div>
-      )}
-    </nav>
+          </div>
+        </nav>
+      </header>
+    </>
   );
 }

@@ -1,125 +1,292 @@
-import { motion } from "framer-motion";
-import { ExternalLink, Github, Brain, Mic, Video, Languages } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import {
+  ArrowDown,
+  AudioLines,
+  ChartNoAxesCombined,
+  Check,
+  ChevronDown,
+  Clapperboard,
+  ExternalLink,
+  Github,
+  Layers,
+  MessageCircle,
+  Radio,
+  WandSparkles,
+} from "lucide-react";
+
+const workflow = [
+  {
+    label: "Source material",
+    detail: "Music & long-form content",
+    Icon: AudioLines,
+  },
+  {
+    label: "Find the highlights",
+    detail: "AI-assisted selection",
+    Icon: WandSparkles,
+  },
+  {
+    label: "Make it short-form",
+    detail: "Editing & formatting",
+    Icon: Clapperboard,
+  },
+  {
+    label: "Reach an audience",
+    detail: "Scheduling & distribution",
+    Icon: Radio,
+  },
+];
 
 export default function Projects() {
-  const projects = [
-    {
-      title: "Ritmolabs.co: Content Automation Platform",
-      description: "Multi-tenant pipeline that scrapes YouTube videos, uses LLMs to select clips, and automates editing—cropping, speaker-tracking, Whisper captions, and effects—then schedules uploads to TikTok via API. Includes a social listening system with parallel multi-platform collectors, AI trend analysis with sentiment scoring, and real-time WebSocket alerts.",
-      tech: ["FastAPI", "FFmpeg", "OpenAI", "Whisper", "WebSocket"],
-      period: "Jan 2026 -- Present",
-      links: {
-        demo: "https://ritmolabs.co",
-        github: "#"
-      },
-      icon: <Video className="w-8 h-8 text-white" />,
-      color: "bg-rose-500"
-    },
-    {
-      title: "Omi Voice Coach",
-      description: "Built at DevHouse SF Hackathon. A language learning app that listens to your real-life conversations through the Omi AI necklace (omi.me), spots mistakes in grammar, vocabulary, and pronunciation using AI, and sends you personalized daily practice exercises — like having a language tutor that learns from how you actually speak.",
-      tech: ["FastAPI", "Gemini AI", "PostgreSQL", "Google Cloud", "Redis"],
-      period: "Mar 2026",
-      links: {
-        demo: "https://omi.me",
-        github: "https://github.com/andresgomezsar/omi_voice_coach"
-      },
-      icon: <Languages className="w-8 h-8 text-white" />,
-      color: "bg-violet-500"
-    },
-    {
-      title: "Cognos",
-      description: "Developer tools for integrating AI voice wearable API data with web applications. Built a custom MCP server that connects the Limitless AI Pendant and Oura Ring to Claude and ChatGPT, letting users access their digital memories and health data through AI assistants.",
-      tech: ["MCP", "API", "LLMs", "Python"],
-      period: "May 2025 -- Dec 2025",
-      links: {
-        demo: "https://cognos.me",
-        github: "#"
-      },
-      icon: <Brain className="w-8 h-8 text-white" />,
-      color: "bg-orange-500"
-    },
-    {
-      title: "Neuro Necklace: Local Memory Store",
-      description: "Built a voice-first memory pipeline for the Limitless Pendant: local transcription, speaker diarization, and conversation summarization without cloud dependencies. Uses Whisper-based transcription with Pyannote voice ID and MCP integration.",
-      tech: ["Whisper", "VAD", "Ollama", "MCP", "Python"],
-      period: "Jun 2024 -- Apr 2025",
-      links: {
-        demo: "#",
-        github: "#"
-      },
-      icon: <Mic className="w-8 h-8 text-white" />,
-      color: "bg-teal-500"
-    }
-  ];
-
   return (
-    <section id="projects" className="py-24 bg-secondary/30 relative overflow-hidden">
-       {/* Decorative Blob */}
-       <div className="absolute top-1/2 right-0 w-96 h-96 bg-accent/10 rounded-full mix-blend-multiply filter blur-3xl" />
-
-      <div className="container mx-auto px-6 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-16 text-center md:text-left"
-        >
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-gray-900">Personal Projects</h2>
-          <p className="text-gray-600 max-w-2xl text-lg">
-            Building tools for privacy-first AI and local processing.
+    <section
+      id="projects"
+      className="work-section section-space"
+      tabIndex={-1}
+      aria-labelledby="work-heading"
+    >
+      <div className="section-shell">
+        <div className="section-heading">
+          <h2 id="work-heading">Selected work</h2>
+          <p>
+            From understanding the problem to building the workflow and
+            measuring what changes.
           </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+        </div>
+        <article className="featured-work" aria-labelledby="ritmo-title">
+          <div className="featured-copy">
+            <div className="work-meta">
+              <span>AI content & growth</span>
+              <span>June 2026–present</span>
+            </div>
+            <h3 id="ritmo-title">Ritmo Labs</h3>
+            <p className="work-lead">
+              From long-form content to a short-form publishing workflow.
+            </p>
+            <p>
+              I developed an AI-powered workflow for selecting highlights,
+              editing and formatting videos, and distributing content across
+              TikTok and YouTube.
+            </p>
+            <p className="inline-result">
+              <strong>100+ accounts</strong>
+              <span>
+                across music promotion campaigns on TikTok and YouTube
+              </span>
+            </p>
+            <a
+              className="text-link"
+              href="https://ritmolabs.co"
+              target="_blank"
+              rel="noreferrer"
             >
-              <Card className="h-full whimsical-card border-none overflow-hidden group">
-                <CardHeader className="pb-2">
-                  <div className="flex items-center justify-between mb-6">
-                    <div className={`p-4 rounded-2xl ${project.color} shadow-lg transform group-hover:scale-110 transition-transform duration-300`}>
-                      {project.icon}
+              Visit Ritmo Labs <ExternalLink size={16} aria-hidden="true" />
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
+          </div>
+          <figure className="workflow-figure">
+            <figcaption>The content workflow</figcaption>
+            <ol className="workflow-list">
+              {workflow.map(({ label, detail, Icon }, index) => (
+                <li key={label}>
+                  <div className="workflow-step">
+                    <span className="workflow-icon">
+                      <Icon size={22} aria-hidden="true" />
+                    </span>
+                    <div>
+                      <strong>{label}</strong>
+                      <span>{detail}</span>
                     </div>
-                    <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                       <Button variant="ghost" size="icon" className="h-10 w-10 rounded-full hover:bg-black/5" asChild>
-                        <a href={project.links.github} target="_blank" rel="noreferrer">
-                          <Github className="w-5 h-5" />
-                        </a>
-                      </Button>
-                      <Button variant="ghost" size="icon" className="h-10 w-10 rounded-full hover:bg-black/5" asChild>
-                        <a href={project.links.demo} target="_blank" rel="noreferrer">
-                          <ExternalLink className="w-5 h-5" />
-                        </a>
-                      </Button>
-                    </div>
+                    {index === workflow.length - 1 && (
+                      <Check
+                        className="workflow-check"
+                        size={18}
+                        aria-hidden="true"
+                      />
+                    )}
                   </div>
-                  <CardTitle className="text-2xl font-bold text-gray-900">{project.title}</CardTitle>
-                  <p className="text-sm text-gray-500 font-mono">{project.period}</p>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((t) => (
-                      <Badge key={t} variant="secondary" className="bg-white/50 hover:bg-white text-gray-700 border border-gray-100">
-                        {t}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+                  {index < workflow.length - 1 && (
+                    <ArrowDown
+                      className="workflow-arrow"
+                      size={16}
+                      aria-hidden="true"
+                    />
+                  )}
+                </li>
+              ))}
+            </ol>
+            <p>A process overview of the work I built.</p>
+          </figure>
+          <details className="case-details">
+            <summary>
+              How I approached it <ChevronDown size={18} aria-hidden="true" />
+            </summary>
+            <div className="case-detail-grid">
+              <div>
+                <h4>The problem</h4>
+                <p>
+                  High-volume promotion requires a repeatable way to turn source
+                  content into videos that can be scheduled and published across
+                  many accounts.
+                </p>
+              </div>
+              <div>
+                <h4>My contribution</h4>
+                <p>
+                  I developed the AI-assisted production workflow and designed
+                  the operational steps for content generation, scheduling, and
+                  publishing.
+                </p>
+              </div>
+              <div>
+                <h4>The result</h4>
+                <p>
+                  Scaled music promotion campaigns across more than 100 TikTok
+                  and YouTube accounts, connecting content production with
+                  distribution.
+                </p>
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <div className="supporting-work">
+          <article
+            className="work-story sony-story"
+            aria-labelledby="sony-title"
+          >
+            <div className="story-icon">
+              <ChartNoAxesCombined size={24} aria-hidden="true" />
+            </div>
+            <div className="work-meta">
+              <span>Human-risk analytics</span>
+              <span>2023–2025</span>
+            </div>
+            <h3 id="sony-title">Sony Pictures Entertainment</h3>
+            <p className="work-lead">
+              Making security programs easier to measure and improve.
+            </p>
+            <p>
+              I automated reporting and managed the analytical lifecycle of a
+              phishing simulation program serving more than 12,000 employees.
+            </p>
+            <dl className="results-grid">
+              <div>
+                <dt>Manual work eliminated</dt>
+                <dd>
+                  50+ <span>hours/month</span>
+                </dd>
+              </div>
+              <div>
+                <dt>Threat-reporting rates</dt>
+                <dd>+40%</dd>
+              </div>
+              <div>
+                <dt>Training engagement</dt>
+                <dd>+300%</dd>
+              </div>
+            </dl>
+            <details className="case-details">
+              <summary>
+                What drove the results{" "}
+                <ChevronDown size={18} aria-hidden="true" />
+              </summary>
+              <div className="detail-copy">
+                <p>
+                  I connected campaign design, audience targeting, measurement,
+                  and executive reporting. Campaign and engagement data guided
+                  program improvements, while automated reporting gave
+                  leadership better visibility into performance.
+                </p>
+                <p>
+                  Weekly onboarding sessions translated technical security
+                  requirements into practical guidance for new employees.
+                </p>
+              </div>
+            </details>
+          </article>
+          <article
+            className="work-story cognos-story"
+            aria-labelledby="cognos-title"
+          >
+            <div className="story-icon">
+              <Layers size={24} aria-hidden="true" />
+            </div>
+            <div className="work-meta">
+              <span>Product discovery & prototyping</span>
+              <span>2025–2026</span>
+            </div>
+            <h3 id="cognos-title">Cognos</h3>
+            <p className="work-lead">
+              Connecting conversational AI with wearable devices.
+            </p>
+            <p>
+              As founder and CEO, I translated user and developer feedback into
+              product requirements, workflow designs, and a prioritized roadmap.
+            </p>
+            <div
+              className="product-path"
+              aria-label="Product development process"
+            >
+              <span>User needs</span>
+              <span>Product requirements</span>
+              <span>Working prototypes</span>
+            </div>
+            <p>
+              I defined requirements for APIs, MCP tooling, and LLM-powered
+              applications, using demos and stakeholder feedback to refine the
+              product.
+            </p>
+            <details className="case-details">
+              <summary>
+                How I made product decisions{" "}
+                <ChevronDown size={18} aria-hidden="true" />
+              </summary>
+              <div className="detail-copy">
+                <p>
+                  I took the product from problem discovery through working
+                  prototypes, weighing feature priorities against user needs and
+                  technical feasibility. Feedback from users, developers, and
+                  stakeholders informed the proposed integrations and workflow
+                  designs.
+                </p>
+              </div>
+            </details>
+          </article>
+        </div>
+        <div className="experiments">
+          <div className="experiments-intro">
+            <h3>Experiments</h3>
+            <p>Smaller explorations in voice, learning, and personal AI.</p>
+          </div>
+          <article>
+            <MessageCircle size={22} aria-hidden="true" />
+            <div>
+              <h4>Omi Voice Coach</h4>
+              <p>
+                A DevHouse SF hackathon project exploring personalized language
+                practice from everyday conversations.
+              </p>
+              <a
+                className="text-link"
+                href="https://github.com/andresgomezsar/omi_voice_coach"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Github size={16} aria-hidden="true" /> View source
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>
+            </div>
+          </article>
+          <article>
+            <AudioLines size={22} aria-hidden="true" />
+            <div>
+              <h4>Neuro Necklace</h4>
+              <p>
+                A local voice-memory pipeline exploring transcription, speaker
+                identification, and conversation summaries with Whisper and MCP.
+              </p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
