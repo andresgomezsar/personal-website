@@ -2,9 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import { Download, Menu, X } from "lucide-react";
 
 const links = [
-  { name: "Work", href: "#projects" },
   { name: "Experience", href: "#experience" },
-  { name: "About", href: "#about" },
+  { name: "About & Education", href: "#about" },
+  { name: "Work", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ];
 

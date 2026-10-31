@@ -12,9 +12,9 @@ export default function Home() {
       <Navbar />
       <main id="main" tabIndex={-1}>
         <Hero />
-        <Projects />
         <Experience />
         <About />
+        <Projects />
         <Contact />
       </main>
       <Footer />
