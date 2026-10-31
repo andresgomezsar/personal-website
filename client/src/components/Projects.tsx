@@ -52,6 +52,66 @@ export default function Projects() {
             measuring what changes.
           </p>
         </div>
+        <article className="featured-work news-globe-work" aria-labelledby="news-globe-title">
+          <div className="featured-copy">
+            <div className="work-meta">
+              <span>AI agents & video generation</span>
+              <span>Personal project</span>
+            </div>
+            <h3 id="news-globe-title">News Globe</h3>
+            <p className="work-lead">
+              Pick a place. Turn its news into a narrated video briefing.
+            </p>
+            <p>
+              I built an interactive globe that turns a location and a few topics
+              into a custom news broadcast. It brings together reporting from
+              multiple sources, AI editorial decisions, voice narration, and
+              animated video in one workflow.
+            </p>
+            <ol className="news-globe-steps">
+              <li><strong>Find the story</strong><span>Gather articles and rank what matters.</span></li>
+              <li><strong>Build the briefing</strong><span>Write the script, narrate it, and plan the visuals.</span></li>
+              <li><strong>Render the broadcast</strong><span>Combine story photos, captions, and a rotating globe.</span></li>
+            </ol>
+            <p className="news-globe-stack">React · Express · OpenAI · Deepgram · Remotion</p>
+            <a className="text-link" href="https://github.com/andresgomezsar/news-globe" target="_blank" rel="noreferrer">
+              <Github size={16} aria-hidden="true" /> Explore on GitHub
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
+          </div>
+          <div className="news-globe-preview" aria-label="News Globe screenshots">
+            <figure>
+              <a href="/projects/news-globe-setup.png" target="_blank" rel="noreferrer" aria-label="View full News Globe setup screenshot (opens in a new tab)">
+                <img src="/projects/news-globe-setup.png" alt="News Globe controls with Tokyo selected, technology topics, and narration voices." width="470" height="898" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>Choose a place and a voice</figcaption>
+            </figure>
+            <figure>
+              <a href="/projects/news-globe-broadcast.png" target="_blank" rel="noreferrer" aria-label="View full generated broadcast screenshot (opens in a new tab)">
+                <img src="/projects/news-globe-broadcast.png" alt="A generated Los Angeles briefing with a globe, source headline, key players, and captions." width="1080" height="1920" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>A frame from a generated briefing</figcaption>
+            </figure>
+          </div>
+          <details className="case-details">
+            <summary>Inside the pipeline <ChevronDown size={18} aria-hidden="true" /></summary>
+            <div className="case-detail-grid">
+              <div>
+                <h4>Reporting before writing</h4>
+                <p>GDELT, Google News, and publisher RSS feeds supply the stories. An editor agent reads article text, ranks relevance, and searches again when coverage is thin.</p>
+              </div>
+              <div>
+                <h4>Directing the video</h4>
+                <p>A visual director plans photos, quotes, and statistics around the narration. Code checks its plan against source material and available assets before Remotion renders the video.</p>
+              </div>
+              <div>
+                <h4>From one briefing to a routine</h4>
+                <p>Live progress updates, a library of past briefings, and recurring schedules support the full workflow. Optional publishing connects finished videos to social platforms.</p>
+              </div>
+            </div>
+          </details>
+        </article>
+
         <article className="featured-work" aria-labelledby="ritmo-title">
           <div className="featured-copy">
             <div className="work-meta">
