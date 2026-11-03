@@ -350,10 +350,19 @@ export default function Projects() {
               <span>Working prototypes</span>
             </div>
             <p>
-              I defined requirements for APIs, MCP tooling, and LLM-powered
-              applications, using demos and stakeholder feedback to refine the
-              product.
+              I also built OllamaCognos, a React and Express prototype with
+              health and chat views, local Ollama or LM Studio connections, and
+              MCP tool adapters for Oura, Omi, Bee, and Limitless.
             </p>
+            <a
+              className="text-link"
+              href="https://github.com/andresgomezsar/OllamaCognos"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Github size={16} aria-hidden="true" /> Explore OllamaCognos on GitHub
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
             <details className="case-details">
               <summary>
                 How I made product decisions{" "}
