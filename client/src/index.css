@@ -328,6 +328,43 @@
   overflow: hidden;
   background: white;
 }
+.cognos-feature {
+  display: block;
+  margin-bottom: 26px;
+}
+.cognos-feature .featured-copy {
+  padding: 40px 42px 32px;
+}
+.cognos-feature .featured-copy h3 {
+  font-size: clamp(2.2rem, 3.8vw, 3rem);
+}
+.cognos-feature .featured-copy > p {
+  max-width: 720px;
+}
+.cognos-feature-preview {
+  padding: 28px 42px 24px;
+  border-top: 1px solid var(--line);
+  background: var(--mist);
+}
+.cognos-feature-preview a {
+  display: block;
+  max-width: 1016px;
+  margin-inline: auto;
+}
+.cognos-feature-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.cognos-feature-preview figcaption {
+  max-width: 1016px;
+  margin: 12px auto 0;
+  color: var(--slate);
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
 /* News Globe uses real product screens as the project preview. */
 .news-globe-work {
   margin-bottom: 26px;
@@ -549,9 +586,10 @@
 }
 .supporting-work {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 26px;
   margin-top: 26px;
+  max-width: 800px;
 }
 .work-story {
   border: 1px solid var(--line);
@@ -607,38 +645,6 @@
   font-family: "Inter", sans-serif;
   font-size: 0.68rem;
   letter-spacing: 0;
-}
-.product-path {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-block: 22px;
-  border-left: 2px solid #b9d9cf;
-  padding-left: 16px;
-}
-.product-path span {
-  font-size: 0.85rem;
-  color: var(--teal);
-  font-weight: 500;
-}
-.cognos-preview {
-  margin: 0 0 24px;
-}
-.cognos-preview a {
-  display: block;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-}
-.cognos-preview img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.cognos-preview figcaption {
-  margin-top: 8px;
-  color: var(--slate);
-  font-size: 0.75rem;
 }
 .work-story .case-details {
   margin-top: auto;
@@ -863,6 +869,12 @@
   .workflow-figure {
     padding: 28px;
   }
+  .cognos-feature .featured-copy {
+    padding: 32px;
+  }
+  .cognos-feature-preview {
+    padding-inline: 32px;
+  }
   .work-story {
     padding: 26px;
   }
@@ -989,6 +1001,12 @@
   .featured-copy,
   .workflow-figure {
     padding: 24px;
+  }
+  .cognos-feature .featured-copy {
+    padding: 24px;
+  }
+  .cognos-feature-preview {
+    padding: 18px 18px 20px;
   }
   .featured-copy h3 {
     font-size: 1.9rem;

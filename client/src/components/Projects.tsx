@@ -51,6 +51,35 @@ export default function Projects() {
             measuring what changes.
           </p>
         </div>
+        <article className="featured-work cognos-feature" aria-labelledby="ollamacognos-title">
+          <div className="featured-copy">
+            <div className="work-meta">
+              <span>Developer tools & wearable integrations</span>
+              <span>Cognos demo app</span>
+            </div>
+            <h3 id="ollamacognos-title">OllamaCognos</h3>
+            <p className="work-lead">
+              A working example of what developers could build with voice, memory, and health wearables.
+            </p>
+            <p>
+              At Cognos, I built tools for developers to connect wearable data
+              and AI memory to their own apps. OllamaCognos was one of several
+              demos: it brings Oura health data, conversation context, and MCP
+              tools into an assistant with local Ollama or LM Studio support.
+            </p>
+            <p className="news-globe-stack">React · Express · Ollama · MCP · Oura · Omi</p>
+            <a className="text-link" href="https://github.com/andresgomezsar/OllamaCognos" target="_blank" rel="noreferrer">
+              <Github size={16} aria-hidden="true" /> Explore OllamaCognos on GitHub
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
+          </div>
+          <figure className="cognos-feature-preview">
+            <a href="/projects/ollamacognos-dashboard.jpg" target="_blank" rel="noreferrer" aria-label="View full OllamaCognos dashboard screenshot (opens in a new tab)">
+              <img src="/projects/ollamacognos-dashboard.jpg" alt="OllamaCognos dashboard with Oura health metrics, an offline local AI indicator, and MCP tools." width="1016" height="773" loading="lazy" decoding="async" />
+            </a>
+            <figcaption>The OllamaCognos dashboard, showing wearable data and assistant tools in one place.</figcaption>
+          </figure>
+        </article>
         <article className="featured-work news-globe-work" aria-labelledby="news-globe-title">
           <div className="featured-copy">
             <div className="work-meta">
@@ -318,71 +347,6 @@ export default function Projects() {
                 <p>
                   Weekly onboarding sessions translated technical security
                   requirements into practical guidance for new employees.
-                </p>
-              </div>
-            </details>
-          </article>
-          <article
-            className="work-story cognos-story"
-            aria-labelledby="cognos-title"
-          >
-            <div className="story-icon">
-              <Layers size={24} aria-hidden="true" />
-            </div>
-            <div className="work-meta">
-              <span>Developer tools & wearable integrations</span>
-              <span>2025–2026</span>
-            </div>
-            <h3 id="cognos-title">Cognos</h3>
-            <p className="work-lead">
-              Making voice, memory, and health wearables easier to build with.
-            </p>
-            <p>
-              At Cognos, I worked on developer tools that let others build apps
-              and integrations for voice wearables, AI memory, and health data.
-              Feedback from users and developers shaped the APIs, workflows,
-              and prototypes.
-            </p>
-            <div
-              className="product-path"
-              aria-label="Cognos product direction"
-            >
-              <span>Wearable data and conversation context</span>
-              <span>Developer integrations and tools</span>
-              <span>Demo apps that show what is possible</span>
-            </div>
-            <p>
-              OllamaCognos was one of several demo apps I built to show that
-              capability: a React and Express prototype with
-              health and chat views, local Ollama or LM Studio connections, and
-              MCP tool adapters for Oura, Omi, Bee, and Limitless.
-            </p>
-            <figure className="cognos-preview">
-              <a href="/projects/ollamacognos-dashboard.jpg" target="_blank" rel="noreferrer" aria-label="View full OllamaCognos dashboard screenshot (opens in a new tab)">
-                <img src="/projects/ollamacognos-dashboard.jpg" alt="OllamaCognos dashboard showing wearable health metrics, local AI status, and available MCP tools." width="1016" height="773" loading="lazy" decoding="async" />
-              </a>
-              <figcaption>OllamaCognos dashboard · example integration</figcaption>
-            </figure>
-            <a
-              className="text-link"
-              href="https://github.com/andresgomezsar/OllamaCognos"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Github size={16} aria-hidden="true" /> Explore OllamaCognos on GitHub
-              <span className="sr-only"> (opens in a new tab)</span>
-            </a>
-            <details className="case-details">
-              <summary>
-                How I made product decisions{" "}
-                <ChevronDown size={18} aria-hidden="true" />
-              </summary>
-              <div className="detail-copy">
-                <p>
-                  I used working demos to test how developers could connect
-                  wearable signals and conversation memory to useful AI
-                  experiences. Feedback from users, developers, and stakeholders
-                  guided the integration design and roadmap.
                 </p>
               </div>
             </details>
