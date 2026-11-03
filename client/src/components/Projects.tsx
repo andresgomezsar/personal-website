@@ -8,7 +8,6 @@ import {
   ExternalLink,
   Github,
   Layers,
-  MessageCircle,
   Radio,
   WandSparkles,
 } from "lucide-react";
@@ -107,6 +106,65 @@ export default function Projects() {
               <div>
                 <h4>From one briefing to a routine</h4>
                 <p>Live progress updates, a library of past briefings, and recurring schedules support the full workflow. Optional publishing connects finished videos to social platforms.</p>
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <article className="featured-work" aria-labelledby="lingualearn-title">
+          <div className="featured-copy">
+            <div className="work-meta">
+              <span>Voice AI & language learning</span>
+              <span>Built for DevHouse</span>
+            </div>
+            <h3 id="lingualearn-title">Omi LinguaLearn</h3>
+            <p className="work-lead">Turn everyday conversations into something to practice.</p>
+            <p>
+              I built a language-learning prototype that connects Omi conversation
+              memories with personalized speaking challenges. Gemini generates
+              prompts and feedback, and a spaced-repetition queue turns corrections
+              into future practice.
+            </p>
+            <p className="news-globe-stack">React · TypeScript · Express · Gemini · Google Cloud Storage</p>
+            <a className="text-link" href="https://github.com/andresgomezsar/omi-lingualearn" target="_blank" rel="noreferrer">
+              <Github size={16} aria-hidden="true" /> Explore the code
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
+          </div>
+          <figure className="workflow-figure">
+            <figcaption>From conversation to practice</figcaption>
+            <ol className="workflow-list">
+              {[
+                { label: "Remember the context", detail: "Extract useful facts from Omi memories", Icon: AudioLines },
+                { label: "Make it personal", detail: "Generate a speaking prompt with Gemini", Icon: WandSparkles },
+                { label: "Learn from the response", detail: "Feedback on language and optional audio", Icon: Layers },
+                { label: "Practice again", detail: "Schedule corrections for spaced review", Icon: Check },
+              ].map(({ label, detail, Icon }, index) => (
+                <li key={label}>
+                  <div className="workflow-step">
+                    <span className="workflow-icon"><Icon size={22} aria-hidden="true" /></span>
+                    <div><strong>{label}</strong><span>{detail}</span></div>
+                  </div>
+                  {index < 3 && <ArrowDown className="workflow-arrow" size={16} aria-hidden="true" />}
+                </li>
+              ))}
+            </ol>
+            <p>A self-hosted prototype exploring a more personal practice loop.</p>
+          </figure>
+          <details className="case-details">
+            <summary>Technical decisions <ChevronDown size={18} aria-hidden="true" /></summary>
+            <div className="case-detail-grid">
+              <div>
+                <h4>Making audio usable</h4>
+                <p>Receive PCM16 audio, assemble WAV segments, and keep recordings in account-scoped cloud storage for optional pronunciation feedback.</p>
+              </div>
+              <div>
+                <h4>Protecting personal context</h4>
+                <p>Separate browser sessions from authenticated webhook delivery, bound audio buffering, and clear private browser data on sign-out.</p>
+              </div>
+              <div>
+                <h4>Keeping the scope honest</h4>
+                <p>A single-operator prototype with in-memory state. The next step is durable storage and end-to-end testing with live Omi events.</p>
               </div>
             </div>
           </details>
@@ -318,25 +376,6 @@ export default function Projects() {
             <h3>Experiments</h3>
             <p>Smaller explorations in voice, learning, and personal AI.</p>
           </div>
-          <article>
-            <MessageCircle size={22} aria-hidden="true" />
-            <div>
-              <h4>Omi Voice Coach</h4>
-              <p>
-                A DevHouse SF hackathon project exploring personalized language
-                practice from everyday conversations.
-              </p>
-              <a
-                className="text-link"
-                href="https://github.com/andresgomezsar/omi_voice_coach"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Github size={16} aria-hidden="true" /> View source
-                <span className="sr-only"> (opens in a new tab)</span>
-              </a>
-            </div>
-          </article>
           <article>
             <AudioLines size={22} aria-hidden="true" />
             <div>

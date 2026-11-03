@@ -1,5 +1,12 @@
 const experiences = [
   {
+    company: "Ritmo Labs",
+    title: "AI Content & Growth",
+    period: "June 2026–present",
+    description:
+      "Built an AI-powered workflow that turns music and long-form content into short-form videos, automating highlight selection, editing, and distribution. Scaled music promotion campaigns across 100+ TikTok and YouTube accounts with repeatable generation, scheduling, and publishing workflows.",
+  },
+  {
     company: "Cognos",
     title: "Founder & CEO",
     period: "May 2025–June 2026",

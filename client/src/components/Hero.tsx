@@ -12,12 +12,12 @@ export default function Hero() {
       <div className="hero-copy">
         <p className="intro-name">Andrés Gómez Sarmiento</p>
         <h1 id="intro-heading">
-          I build AI products and turn data into better decisions.
+          I build AI products and data workflows, from discovery through implementation.
         </h1>
         <p className="hero-description">
-          I’m a founder and analyst with experience in AI workflows, human-risk
-          analytics, and computational social science. I connect technical
-          possibilities with the people who use them.
+          I’m a founder and analyst who turns user needs into working products.
+          My work spans AI content tools, workflow automation, and security
+          analytics, grounded in computational social science.
         </p>
         <div className="hero-actions">
           <a className="button button-primary" href="#projects">
