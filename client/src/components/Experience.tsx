@@ -11,7 +11,7 @@ const experiences = [
     title: "Founder & CEO",
     period: "May 2025–June 2026",
     description:
-      "Led product discovery, requirements, and prototype development for an AI platform connecting conversational AI with wearable devices. Used user and developer feedback to shape the roadmap.",
+      "Built developer tools for connecting voice, AI memory, and health wearables so developers could create compatible apps and integrations. Turned user and developer feedback into product requirements and working demos, including OllamaCognos.",
   },
   {
     company: "Sony Pictures Entertainment",

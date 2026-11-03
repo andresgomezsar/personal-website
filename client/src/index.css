@@ -621,6 +621,25 @@
   color: var(--teal);
   font-weight: 500;
 }
+.cognos-preview {
+  margin: 0 0 24px;
+}
+.cognos-preview a {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.cognos-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.cognos-preview figcaption {
+  margin-top: 8px;
+  color: var(--slate);
+  font-size: 0.75rem;
+}
 .work-story .case-details {
   margin-top: auto;
 }

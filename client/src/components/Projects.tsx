@@ -330,30 +330,39 @@ export default function Projects() {
               <Layers size={24} aria-hidden="true" />
             </div>
             <div className="work-meta">
-              <span>Product discovery & prototyping</span>
+              <span>Developer tools & wearable integrations</span>
               <span>2025–2026</span>
             </div>
             <h3 id="cognos-title">Cognos</h3>
             <p className="work-lead">
-              Connecting conversational AI with wearable devices.
+              Making voice, memory, and health wearables easier to build with.
             </p>
             <p>
-              As founder and CEO, I translated user and developer feedback into
-              product requirements, workflow designs, and a prioritized roadmap.
+              At Cognos, I worked on developer tools that let others build apps
+              and integrations for voice wearables, AI memory, and health data.
+              Feedback from users and developers shaped the APIs, workflows,
+              and prototypes.
             </p>
             <div
               className="product-path"
-              aria-label="Product development process"
+              aria-label="Cognos product direction"
             >
-              <span>User needs</span>
-              <span>Product requirements</span>
-              <span>Working prototypes</span>
+              <span>Wearable data and conversation context</span>
+              <span>Developer integrations and tools</span>
+              <span>Demo apps that show what is possible</span>
             </div>
             <p>
-              I also built OllamaCognos, a React and Express prototype with
+              OllamaCognos was one of several demo apps I built to show that
+              capability: a React and Express prototype with
               health and chat views, local Ollama or LM Studio connections, and
               MCP tool adapters for Oura, Omi, Bee, and Limitless.
             </p>
+            <figure className="cognos-preview">
+              <a href="/projects/ollamacognos-dashboard.jpg" target="_blank" rel="noreferrer" aria-label="View full OllamaCognos dashboard screenshot (opens in a new tab)">
+                <img src="/projects/ollamacognos-dashboard.jpg" alt="OllamaCognos dashboard showing wearable health metrics, local AI status, and available MCP tools." width="1016" height="773" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>OllamaCognos dashboard · example integration</figcaption>
+            </figure>
             <a
               className="text-link"
               href="https://github.com/andresgomezsar/OllamaCognos"
@@ -370,11 +379,10 @@ export default function Projects() {
               </summary>
               <div className="detail-copy">
                 <p>
-                  I took the product from problem discovery through working
-                  prototypes, weighing feature priorities against user needs and
-                  technical feasibility. Feedback from users, developers, and
-                  stakeholders informed the proposed integrations and workflow
-                  designs.
+                  I used working demos to test how developers could connect
+                  wearable signals and conversation memory to useful AI
+                  experiences. Feedback from users, developers, and stakeholders
+                  guided the integration design and roadmap.
                 </p>
               </div>
             </details>
