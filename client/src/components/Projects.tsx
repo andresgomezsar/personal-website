@@ -140,7 +140,7 @@ export default function Projects() {
           </details>
         </article>
 
-        <article className="featured-work" aria-labelledby="lingualearn-title">
+        <article className="featured-work lingualearn-work" aria-labelledby="lingualearn-title">
           <div className="featured-copy">
             <div className="work-meta">
               <span>Voice AI & language learning</span>
@@ -180,6 +180,20 @@ export default function Projects() {
             </ol>
             <p>A self-hosted prototype exploring a more personal practice loop.</p>
           </figure>
+          <div className="lingualearn-gallery" aria-label="Omi LinguaLearn screenshots">
+            <figure>
+              <a href="/projects/lingualearn-landing.png" target="_blank" rel="noreferrer" aria-label="View full LinguaLearn landing-page screenshot (opens in a new tab)">
+                <img src="/projects/lingualearn-landing.png" alt="LinguaLearn landing page introducing personalized practice from Omi conversation memories." width="2730" height="1928" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>From everyday conversation to practice</figcaption>
+            </figure>
+            <figure>
+              <a href="/projects/lingualearn-dashboard.png" target="_blank" rel="noreferrer" aria-label="View full LinguaLearn dashboard screenshot (opens in a new tab)">
+                <img src="/projects/lingualearn-dashboard.png" alt="LinguaLearn dashboard with progress, learning items, a voice challenge, and an Omi connection indicator." width="2756" height="1932" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>The practice dashboard</figcaption>
+            </figure>
+          </div>
           <details className="case-details">
             <summary>Technical decisions <ChevronDown size={18} aria-hidden="true" /></summary>
             <div className="case-detail-grid">
